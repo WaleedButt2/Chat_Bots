@@ -1,6 +1,3 @@
-import spacy
-from spacy import displacy
-NER = spacy.load("en_core_web_sm")
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.chains.question_answering import load_qa_chain

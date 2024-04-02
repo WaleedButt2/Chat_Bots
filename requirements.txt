@@ -42,6 +42,7 @@ streamlit-chat==0.1.1
 tiktoken==0.6.0
 tokenizers==0.15.2
 toml==0.10.2
+faiss-cpu
 toolz==0.12.1
 torch==2.2.1
 tornado==6.4

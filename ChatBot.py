@@ -70,7 +70,7 @@ class SimplifiedChatbot:
         for ass in queries:
             docs.append(self.db.similarity_search(ass,k=1)[0])
             #print(docs[0][0].page_content)e
-
-        docs.append(self.db.similarity_search(self.memory.chat_memory.messages[-1].content+query,k=1)[0])
+        if len(self.memory.chat_memory.messages)>0:
+            docs.append(self.db.similarity_search(self.memory.chat_memory.messages[-1].content+query,k=1)[0])
         response = self.qa_chain({"question": query,"input_documents":docs})
         return response["output_text"]
